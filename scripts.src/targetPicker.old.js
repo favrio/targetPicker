@@ -175,7 +175,30 @@
 		this.$boxs.append(boxHtml);
 
 		// 依赖tabSwitch进行选项卡切换
-		require("jquery.tabSwitch");
+		$.fn.tabSwitch = function(options) {
+			var settings = {
+				"liSelcter": ".w_tab_names li",
+				"boxSelecter": ".w_tab_boxs .box",
+				"liActiveClass": "cur",
+				"boxActiveClass": "cur",
+				"callback": $.noop
+			};
+			if (options) {
+				$.extend(settings, options);
+			}
+			return this.each(function() {
+				var that = this;
+				$(this).find(settings.liSelcter).each(function(index) {
+					$(this).click(function() {
+						$(this).addClass(settings.liActiveClass).siblings().removeClass(settings.liActiveClass);
+						$(that).find(settings.boxSelecter).eq(index).addClass(settings.boxActiveClass).siblings().removeClass(settings.boxActiveClass);
+						settings.callback($(this), $(that).find(settings.boxSelecter).eq(index));
+					});
+				});
+			});
+		};
+
+
 		this.$wrap.tabSwitch({
 			liSelcter: ".target-picker-navs a",
 			boxSelecter: ".target-picker-boxs .box-item",

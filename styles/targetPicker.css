@@ -66,7 +66,7 @@
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  background: url(/img/cus_group/del.png) no-repeat 50% 50%;
+  background: url(../images/del.png) no-repeat 50% 50%;
   width: 10px;
   height: 10px;
   margin: 0 0 0 8px;

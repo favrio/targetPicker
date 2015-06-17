@@ -4,18 +4,30 @@
 	<meta charset="UTF-8">
 	<title>目的地选择器</title>
 	<link rel="stylesheet" href="styles/targetPicker.min.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-size: 12px;
+		}
+		.target-picker-wrap {
+			margin: 20px;
+		}
+	</style>
 </head>
 <body>
-	<input id="picker-01" type="text">
 	
 	<script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-	<script src="scripts/targetPicker.min.js"></script>
+	<script src="scripts/targetPicker.old.min.js"></script>
 	<script type="text/javascript">
-	var picker = targetPicker.init();
-	picker.create();
+		var data = [{"name":"美国","citys":[{"name":"纽约"},{"name":"华盛顿"},{"name":"尼亚加拉瀑布"},{"name":"洛杉矶"},{"name":"旧金山"},{"name":"拉斯维加斯"},{"name":"黄石"},{"name":"夏威夷"},{"name":"迈阿密"},{"name":"奥兰多"},{"name":"芝加哥"},{"name":"休斯顿"},{"name":"底特律"},{"name":"西雅图"}]},{"name":"加拿大","citys":[{"name":"温哥华"},{"name":"落基山脉"},{"name":"多伦多"},{"name":"魁北克"},{"name":"渥太华"},{"name":"千岛湖"}]},{"name":"欧洲","citys":[{"name":"德国"},{"name":"法国"},{"name":"瑞士"},{"name":"英国"},{"name":"意大利"},{"name":"奥地利"},{"name":"匈牙利"},{"name":"荷兰"},{"name":"希腊"}]}];
 
-	var picker2 = targetPicker.init();
-	picker2.create();	
+		var cusTargetPicker = new TargetPicker({
+			targetEle: "body",
+			data: data
+		});
 	</script>
 </body>
 </html>
