@@ -1,0 +1,73 @@
+.target-picker-navs {
+  margin-bottom: 10px;
+}
+.target-picker-navs a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 14px;
+  line-height: 30px;
+  color: #000000;
+  margin: 0 10px 0 0;
+}
+.target-picker-navs .curr {
+  color: #AF935F;
+  font-weight: bold;
+}
+.target-picker-boxs {
+  margin-bottom: 20px;
+}
+.target-picker-boxs a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin: 0 10px 8px 0;
+  color: #6E6E6E;
+  border: 1px solid #FFF;
+  line-height: 1;
+  padding: 2px;
+}
+.target-picker-boxs .box-item {
+  display: none;
+}
+.target-picker-boxs .curr {
+  display: block;
+}
+.target-picker-boxs .checked {
+  border: 1px solid #af935f;
+  color: #af935f;
+}
+.target-picker-custom input {
+  min-height: 30px;
+  line-height: 30px;
+  margin-bottom: 17px;
+  border: 1px solid #af935f;
+  padding: 0 10px;
+}
+.target-picker-custom .mu-btn {
+  padding: 7px 10px;
+}
+.check-result a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  color: #FFF;
+  background: #AF935F;
+  border-radius: 2px;
+  padding: 6px 10px;
+  margin: 0 4px 3px 0;
+  line-height: 1;
+}
+.check-result a:hover {
+  background: #735F3A;
+}
+.check-result .del {
+  text-decoration: none;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background: url(/img/cus_group/del.png) no-repeat 50% 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 0 0 8px;
+}
